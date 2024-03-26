@@ -27,8 +27,11 @@ function addTodo() {
 
 
 function deleteTodo(index){
-    console.log('todo deleted' , index);
+    arr.splice(index, 1);
+    addTodo()
 }
 function editTodo(index){
-    console.log('todo edited' , index);
+    const updatedVal = prompt('enter updated value');
+    arr.splice(index , 1 , updatedVal);
+    addTodo()
 }
